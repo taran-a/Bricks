@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+
+<title>Bricks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta charset="UTF-8">
+<link rel="stylesheet" href="main.css"/>
+<script src="main.js"></script>
+
+</head>
+<body>
+
+<div id="menu">
+    <h1 id="logo">BrickS</h1>
+    <ul id="nav">
+        <li id="newGame" name="buttons">New Game</li>
+        <li name="buttons">About</li>
+        <li id="resume" name="buttons">Resume</li>
+        <li id="social">
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button"
+               data-text="Try simply game Bricks, just move!"
+               data-count="horizontal" data-via="kalipsso96"
+               data-hashtags="BricksGame">Tweet</a>
+        </li>
+    </ul>
+</div>
+
+<div id="score-wrapper" class="">
+    <div id="menu-btn" name="buttons"><span>MENU</span></div>
+    <div id="score">
+        <span id='score-name' name="buttons">SCORE</span></br>
+        <span id="multiplication" name="buttons"></span>
+        <span id='score-count' name="buttons"></span>
+    </div>
+    <div id="best-score">
+        <span id='best-name' name="buttons">BEST</span>
+        <span id='best-count' name="buttons"></span>
+    </div>
+</div>
+
+<div id="board"></div>
+<div id="gameover">
+    <div class="overText-wrap">
+        <span class="over-text">NO MORE</br>MOVES</span></br>
+        <span id="restartGame" class="over-text" name="buttons">RESTART</span></br>
+        <span class="over-text">SCORE: <span class='score-count' name="buttons"></span></span>
+    </div>
+</div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></body>
+</html>

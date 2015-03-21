@@ -2,25 +2,14 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
 
-    <title>Bricks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css"/>
-    <script src="main.js"></script>
+<title>Bricks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta charset="UTF-8">
+<link rel="stylesheet" href="main.css"/>
+<script src="main.js"></script>
 
 </head>
-
 <body>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
 
 <div id="menu">
     <h1 id="logo">BrickS</h1>
@@ -37,11 +26,12 @@
         </li>
     </ul>
 </div>
+
 <div id="score-wrapper" class="">
     <div id="menu-btn" name="buttons"><span>MENU</span></div>
     <div id="score">
         <span id='score-name' name="buttons">SCORE</span></br>
-        <span id="multiplication" name="buttons">x3</span>
+        <span id="multiplication" name="buttons"></span>
         <span id='score-count' name="buttons"></span>
     </div>
     <div id="best-score">
@@ -49,6 +39,7 @@
         <span id='best-count' name="buttons"></span>
     </div>
 </div>
+
 <div id="board"></div>
 <div id="gameover">
     <div class="overText-wrap">

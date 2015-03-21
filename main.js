@@ -295,7 +295,6 @@ var Game = function(scrWidth, scrHeight) {
     function scoreMultiplication() {
         if(scoreMULT > 5) scoreMULT=5;
         if(scoreMULT >= 2) {
-            debugger;
             view.mult.innerText = 'x' + scoreMULT;
             view.mult.style.color = scoreColor;
             setTimeout(function() {

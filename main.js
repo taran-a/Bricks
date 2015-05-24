@@ -34,14 +34,14 @@ var Game = function(scrWidth, scrHeight) {
             active = true;
             ballDiv.className += ' active';
             if(preBall)stepVerification(this);
-            else preBall = this
+            else preBall = this;
         };
 
         this.deactivate = function() {
             active = false;
             ballDiv.className = 'ball';
             preBall = undefined;
-        }
+        };
     };
 
     var wrapper = document.getElementById('wrapper');
@@ -70,7 +70,7 @@ var Game = function(scrWidth, scrHeight) {
 
     view.restart.onclick = function() {
         view.gameOver.style.top = '-100%';
-        setTimeout(function() {startNewGame();}, 500)
+        setTimeout(function() {startNewGame();}, 500);
     };
     view.resume.onclick = function() {
         if(endGame) return;
@@ -78,7 +78,7 @@ var Game = function(scrWidth, scrHeight) {
     };
     view.menu.onclick = function() {
         if(!endGame) view.resume.className = 'scoreColor';
-        toggleMenu()
+        toggleMenu();
     };
     view.newGame.onclick = function() {
         startNewGame();
@@ -90,7 +90,7 @@ var Game = function(scrWidth, scrHeight) {
         for (var i = maxWidth; i > 0; i--) {
             if(i % 7 === 0 && i+6 <= maxWidth) {
                 ballWidth = i/7;
-                break
+                break;
             }
         }
         board.style.width = ballWidth*6+'px';
@@ -116,7 +116,7 @@ var Game = function(scrWidth, scrHeight) {
         view.gameOver.style.display = 'table';
         board.appendChild(view.gameOver);
         view.endScore.innerText = view.count.innerText;
-        setTimeout(function() {view.gameOver.style.top = 0;}, 60)
+        setTimeout(function() {view.gameOver.style.top = 0;}, 60);
     }
 
     function startNewGame() {
@@ -139,7 +139,7 @@ var Game = function(scrWidth, scrHeight) {
             for(var j = 0; j < 6; j++) {
                 row.push(addBalls(i, j));
             }
-            ballsArray.push(row)
+            ballsArray.push(row);
         }
     }
 
@@ -180,7 +180,7 @@ var Game = function(scrWidth, scrHeight) {
             view.scoreWrap.style.display = 'block';
             setTimeout(function() {
                 board.style.opacity = 1;
-                menu.style.opacity = 0
+                menu.style.opacity = 0;
             }, 30);
             menuIsOpen = false;
         } else {
@@ -198,7 +198,7 @@ var Game = function(scrWidth, scrHeight) {
     function deactivateAll() {
         for (var i = 0; i < ballsArray.length; i++) {
             for (var j = 0; j < ballsArray.length; j++) {
-                ballsArray[i][j].deactivate()
+                ballsArray[i][j].deactivate();
             }
         }
     }
@@ -212,10 +212,10 @@ var Game = function(scrWidth, scrHeight) {
                 animation = true;
                 setTimeout(mover, 30);
                 setTimeout(clearBoard, 530);
-            } else changeBalls(ball, preBall)
+            } else changeBalls(ball, preBall);
         }
         setTimeout(function() {
-           deactivateAll()
+           deactivateAll();
         }, 500);
     }
 
@@ -227,9 +227,9 @@ var Game = function(scrWidth, scrHeight) {
             [a.cords[0]-1, a.cords[1]]
         ];
         for(var y=0;y<4;y++) {
-            if(steps[y][0]===b.cords[0] && steps[y][1]===b.cords[1]) return true        
+            if(steps[y][0]===b.cords[0] && steps[y][1]===b.cords[1]) return true;
         } 
-        return false
+        return false;
     }
 
     function changerYtoX(ballsArr) {
@@ -239,7 +239,7 @@ var Game = function(scrWidth, scrHeight) {
             for(var j=0;j<ballsArr.length;j++) {
                 row.push(ballsArr[j][i]);
             }
-            array.push(row)
+            array.push(row);
         }
         return array;
     }
@@ -252,12 +252,12 @@ var Game = function(scrWidth, scrHeight) {
                if(equalChecker(ballsArr[x].slice(s, s+3))) count++;
             }
             if(count <= 1) continue top;
-            for(var s=0;s<3;s++) {
-                if(equalChecker(ballsArr[x].slice(s, s+4))) count++;
+            for(var d=0;d<3;d++) {
+                if(equalChecker(ballsArr[x].slice(d, d+4))) count++;
             }
             if(count < 3) continue top;
-            for(var s=0;s<2;s++) {
-                if(equalChecker(ballsArr[x].slice(s, s+5))) count++;
+            for(var v=0;v<2;v++) {
+                if(equalChecker(ballsArr[x].slice(v, v+5))) count++;
             }
             if(count < 4) continue top;
             equalChecker(ballsArr[x]);
@@ -288,7 +288,7 @@ var Game = function(scrWidth, scrHeight) {
             view.bestCount.style.color = scoreColor;
             localStorage.brickScore = score;
             view.bestCount.innerText = score;
-            view.count.innerText = score
+            view.count.innerText = score;
         }
     }
 
@@ -299,7 +299,7 @@ var Game = function(scrWidth, scrHeight) {
             view.mult.style.color = scoreColor;
             setTimeout(function() {
                 view.mult.innerText = '';
-            }, 400)
+            }, 400);
         }
     }
 
@@ -359,7 +359,7 @@ var Game = function(scrWidth, scrHeight) {
         for(var i=0;i<ballsArray.length;i++) {
             for(var j=0;j<ballsArray.length;j++) {
                 if(ballsArray[j][i] !==null) {
-                    sliderBalls.push(ballsArray[j][i])
+                    sliderBalls.push(ballsArray[j][i]);
                 }
             }
             for(var k=ballsArray.length-1; k>=0;k--) {
